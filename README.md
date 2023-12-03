@@ -68,4 +68,18 @@
        kubectl describe pod jhooq-docker-demo //describe el pod
        ```
 ### Ejecucion:
-![Pagina web creada]()
+* **Contenedor minikube en Rancher:**
+   * ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/rancher_desktop.jpg)
+* **Verificar que el pod ha sido creado correctamente y esta corriendo:**
+   * En consola:
+     ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/pods_consola.jpg)
+   * En forma grafica:
+     ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/pods_lista.jpg)
+     ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/pods.jpg)
+* **Verificar que el servicio se creo correctamente:**
+   * ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/get_service.jpg)
+* **Ejecutar el servicio:**
+   * ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/minikube_service.jpg)
+* **Ejecucion exitosa de la pagina web**
+   ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/pagina_web.jpg)
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form id="calculatorForm">
+        <label for="operacion">Operación:</label>
+        <select id="operacion" name="operacion">
+            <option value="sumar">Sumar</option>
+            <option value="restar">Restar</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+        </select>
+
+        <label for="numero1">Número 1:</label>
+        <input type="number" id="numero1" name="numero1" required>
+
+        <label for="numero2">Número 2:</label>
+        <input type="number" id="numero2" name="numero2" required>
+
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+
+    <h2>Resultado:</h2>
+    <p id="resultado"></p>
+    <p id="resultado_hexa"></p>
+
+    <script>
+        function calcular() {
+            var operacion = document.getElementById("operacion").value;
+            var numero1 = document.getElementById("numero1").value;
+            var numero2 = document.getElementById("numero2").value;
+
+            fetch('http://localhost:3000/calcular', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    operacion: operacion,
+                    numero1: parseFloat(numero1),
+                    numero2: parseFloat(numero2),
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("resultado").innerHTML = 'Resultado: ' + data.resultado;
+                document.getElementById("resultado_hexa").innerHTML = 'Resultado Hexadecimal: ' + data.resultado_hexa;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>

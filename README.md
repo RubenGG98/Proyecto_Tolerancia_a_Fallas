@@ -1,5 +1,5 @@
 # Proyecto_Tolerancia_a_Fallas
-##Calculador web que permite usar operaciones basicas y conversion de valor a hexadecimal.
+## Calculador web que permite usar operaciones basicas y conversion de valor a hexadecimal.
 
 Requisitos:
 -Rancher Desktop

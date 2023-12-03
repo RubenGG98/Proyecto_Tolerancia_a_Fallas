@@ -70,6 +70,9 @@
 ### Ejecucion:
 * **Contenedor minikube en Rancher:**
    * ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/rancher_desktop.jpg)
+* **Cluster en Rancher:**
+   * ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/cluster_rancher.jpg)
+   * ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/rancher_consola.jpg)
 * **Verificar que el pod ha sido creado correctamente y esta corriendo:**
    * En consola:
      ![Pagina web creada](Proyecto_Final/Pruebas_ejecucion/pods_consola.jpg)

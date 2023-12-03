@@ -1,4 +1,8 @@
 # Proyecto_Tolerancia_a_Fallas
+## Miembros del equipo de desarrollo:
+* Rauf Alfonso  Hamden Estrada:  221350567
+* Ruben Alejandro Gutiérrez Galán: 214798315
+  
 ## Calculador web que permite usar operaciones basicas y conversion de valor a hexadecimal.
 
 ### Requisitos:

@@ -34,22 +34,38 @@
        * Version:          0.19.0
       * GitCommit:        de40ad0
 
-```bash
-docker run -it --rm nombre_de_la_imagen
-```
-
 ### Comandos:
   * **para la creacion y ejecucion:**
-     **Creacion del pod**
-    ```Creacion
-      kubectl run jhooq-docker-demo --image=rauf56/jhooq-docker-demo --port=8080
-    ```
-     **Exponer el puerto:** kubectl expose pod jhooq-docker-demo --type=LoadBalancer --port=8080 --target-port=80
+     * **Creacion del pod**
+       ```
+       kubectl run jhooq-docker-demo --image=rauf56/jhooq-docker-demo --port=8080
+       ```
+     * **Exponer el puerto:**
+       ```
+       kubectl expose pod jhooq-docker-demo --type=LoadBalancer --port=8080 --target-port=80
+       ```
       
-    * **Ejecutar el servicio:** minikube service jhooq-docker-demo
+    * **Ejecutar el servicio:**
+      ```
+      minikube service jhooq-docker-demo
+      ```
   * **Para consultar los pods y service:**
-    * kubectl get pods //visualizar los pods y su estado
-    * kubectl get services //visualizar los servicios dsiponibles
-    * kubectl describe services jhooq-docker-demo //muestra la descripcion del servicio
-    * kubectl describe pod jhooq-docker-demo //describe el pod
-
+   
+    *
+       ```
+       kubectl get pods //visualizar los pods y su estado
+       ```
+    *
+       ```
+       kubectl get services //visualizar los servicios dsiponibles
+       ```
+    * 
+       ```
+       kubectl describe services jhooq-docker-demo //muestra la descripcion del servicio
+       ```
+    * 
+       ```
+       kubectl describe pod jhooq-docker-demo //describe el pod
+       ```
+### Ejecucion:
+![Pagina web creada]()
